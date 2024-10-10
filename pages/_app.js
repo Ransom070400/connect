@@ -9,6 +9,7 @@ import {
 	trustWallet,
 	walletConnect,
 	zerionWallet,
+	suiwallet,
 } from '@thirdweb-dev/react';
 import Head from 'next/head';
 import '../styles/globals.css';
@@ -22,7 +23,7 @@ function MyApp({ Component, pageProps }) {
 			</Head>
 
 			<ThirdwebProvider
-				activeChain='ethereum'
+				activeChain='sui'
 				clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
 				supportedWallets={[
 					embeddedWallet(),
@@ -34,6 +35,7 @@ function MyApp({ Component, pageProps }) {
 					trustWallet(),
 					phantomWallet(),
 					localWallet(),
+					suiwallet(),
 				]}
 			>
 				<Component {...pageProps} />
