@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
 			</Head>
 
 			<ThirdwebProvider
-				activeChain='sui'
+				activeChain='ethereum'
 				clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
 				supportedWallets={[
 					embeddedWallet(),
